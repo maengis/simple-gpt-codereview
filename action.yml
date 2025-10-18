@@ -1,0 +1,16 @@
+name: "Simple GPT Code Review"
+description: "Simple GPT Code Review"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+inputs:
+  OPENAI_KEY:
+    description: "OpenAI API Key"
+    required: true
+  GITHUB_TOKEN:
+    description: "GitHub Token"
+    required: true
+  OPENAI_MODEL:
+    description: "OpenAI Model"
+    required: true
