@@ -86,7 +86,7 @@ jobs:
       - name: Simple GPT Code Review
         uses: maengis/simple-gpt-codereview@main
         with:
-          OPENAI_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_MODEL: 'gpt-5-mini'
 ```
