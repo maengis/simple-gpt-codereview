@@ -18,7 +18,7 @@ def getenv_any(*names):
 
 GITHUB_TOKEN = getenv_any("GITHUB_TOKEN", "INPUT_GITHUB_TOKEN")
 OPENAI_KEY   = getenv_any("OPENAI_KEY", "INPUT_OPENAI_KEY")
-OPENAI_MODEL = getenv_any("OPENAI_MODEL", "INPUT_OPENAI_MODEL")
+OPENAI_MODEL = getenv_any("OPENAI_MODEL", "INPUT_OPENAI_MODEL") or "gpt-5-mini"
  
 if not GITHUB_TOKEN:
     print("ERROR: GITHUB_TOKEN env is required")
@@ -27,8 +27,6 @@ if not GITHUB_TOKEN:
 if not OPENAI_KEY:
     print("ERROR: OPENAI_KEY env is required")
     sys.exit(1)
- 
-OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5-mini")  # 필요 시 변경
 # =====================
 
 HEADERS = {
